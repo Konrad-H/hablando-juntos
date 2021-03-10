@@ -39,7 +39,7 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Ayudar a ñiños y niñas en su desarollo linguistico es nuestra pasión</div>
+                <div class="masthead-subheading">Ayudar a ñiños y niñas en su desarollo lingüistico es nuestra pasión</div>
                 <div class="masthead-heading text-uppercase">Déjanos ayudarte</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#calendly">Reserva Hora</a>
             </div>
@@ -241,14 +241,16 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Nuestro increible equipo</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted"> </h3> <!-- empty now -->
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="" />
-                            <h4>Kay Garland</h4>
-                            <p class="text-muted">Lead Designer</p>
+                            <h4>Marcela Kleinknecht Lüer</h4>
+                            <p class="text-muted">Fonoaudióloga</p>
+                            <p class="text-center"> Fonoaudióloga egresada de la Universidad de Chile con más de 30 años de experienca en el trabajo de niños y niñas con dificultades en la comunicación. 
+                                Certificada en PROMPT.</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
@@ -257,8 +259,12 @@
                     <div class="col-lg-4">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="" />
-                            <h4>Larry Parker</h4>
-                            <p class="text-muted">Lead Marketer</p>
+                            <h4>Isabel Saéz Kleinknecht</h4>
+                            <p class="text-muted">Fonoaudióloga</p>
+                            <p class="text-center">Fonoaudióloga egresada de la Pontificia Universidad Católica de Chile y
+                                Diplomada en Abordaje Integral en el Niño en Etapa Escolar en la misma universidad.
+                                Especializada en el área infanto-juvenil con estudios en apraxia del habla infantil, Trastorno del lenguaje, Trastorno del espectro autista.
+                                </p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
@@ -268,7 +274,7 @@
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="" />
                             <h4>Diana Petersen</h4>
-                            <p class="text-muted">Lead Developer</p>
+                            <p class="text-muted">Psicóloga</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
@@ -276,11 +282,27 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Nuestros profesionales se destacan por un trabajo integral en el desarollo de los niños, trabajando en conjunto con sus profesores, terapeutas ocupacionales y otros especialistas involucrados en su tratamiento.</p></div>
                 </div>
             </div>
         </section>
+        <!-- Maps-->
+        <section class = "page-section bg-dark">
+            <section class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase text-light">Nuestra Consulta</h2>
+                    <h3 class="section-subheading text-muted">Lunes a Viernes : 9-19hrs - Sábados : 9-12hrs</h3>
+                </div>
+                <div id="map"></div>
 
+                <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+                <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+                  async
+                ></script>
+            
+            </section>
+        </section>
         <!-- Calendly -->
         <div class ="page-section" id="calendly">
             <div class="container">
@@ -319,35 +341,35 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h2 class="section-heading text-uppercase">Contáctanos</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
-                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                <form id="contactForm" name="sentMessage" novalidate="novalidate" action = "contact/contact.php">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
+                                <input class="form-control" id="name" type="text" placeholder="Tu Nombre *" required="required" data-validation-required-message="Porfavor, ingresa tu numero nombre." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
+                                <input class="form-control" id="email" type="email" placeholder="Tu e-mail *" required="required" data-validation-required-message="Porfavor, ingresa tu numero email." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group mb-md-0">
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
+                                <input class="form-control" id="phone" type="tel" placeholder="Tu telefono *" required="required" data-validation-required-message="Porfavor, ingresa tu numero telefónico" />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
-                                <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                <textarea class="form-control" id="message" placeholder="Tu Mensaje *" required="required" data-validation-required-message="Porfavor, ingresa la razón de tu contacto."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                     </div>
                     <div class="text-center">
                         <div id="success"></div>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Enviar Mensaje</button>
                     </div>
                 </form>
             </div>

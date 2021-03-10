@@ -10010,7 +10010,7 @@ p {
 
 @media (min-width: 768px) {
   section {
-    padding: 9rem 0;
+    padding: 2rem 0;
   }
 }
 ::-moz-selection {
@@ -10541,5 +10541,12 @@ section#contact form#contactForm :-ms-input-placeholder {
   position: relative;
   min-width: 320px;
   height: 650px;
+}
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
 }
   
