@@ -54,21 +54,3 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
-
-
-// GOOGLE MAPS MAP
-// Initialize and add the map
-function initMap() {
-    // The location of Uluru 
-    const consulta = { lat: -33.400389649309076, lng: -70.55447790038959 };
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 16,
-      center: consulta,
-    });
-    // The marker, positioned at Uluru
-    const marker = new google.maps.Marker({
-      position: consulta,
-      map: map,
-    });
-  }
