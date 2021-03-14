@@ -1,9 +1,10 @@
 (function (global){
-
+    var recorder, gumStream;    
     var app={};
     var homeHtml = "snippets/home.html";
     var sheetHtml = "snippets/sheet.html";
     var endHtml = "snippets/end.html";
+    const delayTime = 3000;
 
     // Convenience function for inserting innerHTML for 'select'
     var insertHtml = function (selector, html) {
@@ -46,6 +47,7 @@
             },
             false);
     }
+  
 
     loadSheet = function (number){
         showLoading("#main-content");
@@ -59,6 +61,8 @@
                 responseText = insertProperty(responseText, "num", strnum);
                 document.querySelector("#main-content")
             .innerHTML = responseText;
+                var recordButton = document.getElementById("record_"+strnum );
+                recordButton.addEventListener("click", toggleRecording);
             },
             false);
     };
@@ -97,14 +101,50 @@
 
     };
 
-  
+    function toggleRecording(self) {
+        var self=this;
+        if (recorder && recorder.state == "recording") {
+            stopRecording(self); 
+            
+        } 
+        else {
+            $(self).attr('data-recording', 'true');
+            navigator.mediaDevices.getUserMedia({
+                audio: true
+            }).then(function(stream) {
+                gumStream = stream;
+                recorder = new MediaRecorder(stream);
+                recorder.ondataavailable = function(e) {
+                    var url = URL.createObjectURL(e.data);
+                    var preview = document.createElement('audio');
+                    preview.controls = true;
+                    preview.src = url;
+                    var holderObject = $('<div class="row"></div>')
+                    .append(preview);
+                    console.log(holderObject[0]);
+                    document.querySelector(".holder").appendChild(holderObject[0]);
+                };
+                recorder.start();
+                self.className = self.className.replace("btn-primary","btn-danger");
+                setTimeout(function(){stopRecording(self);}, delayTime);
+            });
+        }
+    }
+
+    function stopRecording(self){
+        recorder.stop();
+        gumStream.getAudioTracks()[0].stop();
+        $(self).attr('data-recording', '');
+        self.className = self.className.replace("btn-danger","btn-primary");
+        
+    }
+
 
     app.page= 1;
     
 
 
-    // document.addEventListener("DOMContentLoaded", function (event) {    
-    // function buildSheetHtml(number, )
+
 
 
 

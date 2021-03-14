@@ -23,16 +23,23 @@
         </div>
 
     </div>
-    <div class="row m-1 mt-3 d-flex align-items-center justify-content-center">
+    
+    <div class="row mt-4 d-flex justify-content-center">
         <div class="col-4 text-start ">
             <button id="back" type="button" class="btn btn-primary btn-lamina" onclick = "$app.prevpage()"> 
                 <i class="fas fa-3x fa-backward text-light m-1"></i>
             </button>
         </div>
         <div class="col-4 text-center">
-            <button id="record" type="button" class="btn btn-primary  btn-record"> 
-                <i class="fas fa-3x fa-microphone text-light m-1"></i>
-            </button>
+            <div class="holder">
+                <div id="recordButton" data-role="controls">
+                    <button id="record_{{num}}" type="button" class="btn btn-primary  btn-record"> 
+                        <i class="fas fa-3x fa-microphone text-light m-1"></i>
+                    </button>
+                </div>
+                <div data-role="recordings"></div>
+            </div>
+
         </div>
         <div class="col-4 text-end">
             <button id="next" type="button" class="btn btn-primary btn-lamina" onclick = "$app.nextpage()">
