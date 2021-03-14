@@ -10,13 +10,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.2.0",
-    "browser-sync": "^2.26.13",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0"
+    "browser-sync": "^2.26.13"
   },
   "dependencies": {
+    "autoprefixer": "^10.2.0",
     "bootstrap": "^5.0.0-beta2",
-    "jquery": "^3.5.1"
+    "gulp-postcss": "^9.0.0",
+    "gulp-prettier": "^3.0.0",
+    "gulp-pug": "^1.3.1",
+    "jquery": "^3.5.1",
+    "pug": "^3.0.2",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
   }
 }
