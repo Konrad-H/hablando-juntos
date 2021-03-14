@@ -1,0 +1,41 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, change you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+// @import '../../node_modules/bootstrap/scss/variables';
+
+$primary: #17a4bd;
+// $primary: $red;
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// .sheet{
+//   height: 70vh;
+// }
+
+#lam-only, #lam-all{
+  height:75vh;
+}
+.sheet div>img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+.btn-lamina{
+  width: 130px;
+  height: 75px;
+  border-radius: 150px;
+}
+
+.btn-record{
+  width: 100px;
+  height: 100px;
+  border-radius: 150px;
+}

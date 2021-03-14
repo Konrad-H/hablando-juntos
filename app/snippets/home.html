@@ -1,0 +1,45 @@
+<div class='container '>
+    <div class="text-light text-center">
+        <h1>PHONO-SCAN  </h1>
+        <h2>Apretar el botón para iniciar la evaluación</h2>
+    </div>
+
+
+    <form id="contactForm" name="sentMessage"  action = ""> <!--novalidate="novalidate"-->
+        <div class="row align-items-stretch m-5">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <h5 class='text-light'> Nombre paciente*</h5>
+                    <input class="form-control" id="name" type="text" placeholder="Nombre paciente *" required="required"
+                    data-validation-required-message="Porfavor, ingresa el nombre del niño." />
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                    <h5 class='text-light'> Fecha nacimiento paciente*</h5>
+                    <input class="form-control" id="nacimiento" type="date" placeholder="Fecha nacimiento paciente *" required="required"
+                    data-validation-required-message="Porfavor, ingresa tu numero email." />
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group mb-md-0">
+                    <h5 class='text-light'> Nombre Examinadora *</h5>
+                    <input class="form-control" id="name" type="text" placeholder="Nombre examinadora *" required="required"
+                    data-validation-required-message="Porfavor, ingresa tu numero telefónico" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class=>
+                    <div id="success "> </div>
+
+                    <div class="d-flex align-items-center justify-content-center">
+                        <button id="submit" type="submit" onclick = "app.loadSheet();"
+                        class="btn btn-primary btn-lg text-uppercase">
+                             <h2 class="text-light">Iniciar</h2>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
