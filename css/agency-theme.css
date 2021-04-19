@@ -10166,6 +10166,7 @@ header.masthead .masthead-heading {
   }
 }
 #portfolio .portfolio-item {
+  height: 100%;
   max-width: 25rem;
   margin-left: auto;
   margin-right: auto;
